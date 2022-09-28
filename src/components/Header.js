@@ -3,19 +3,23 @@ import styled from 'styled-components';
 //Icons
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
+//Redux
+import { useSelector } from 'react-redux';
+import { selectCars } from '../features/car/carSlice';
 
 const Header = () => {
     const [burgerStatus, setBurgerStatus] = useState(false);
+    const cars = useSelector(selectCars);
+
     return (
         <Conatiner>
             <a href='/'>
                 <img src='/images/logo.svg' alt='logo' />
             </a>
             <Menu>
-                <a href='/'>Model S</a>
-                <a href='/'>Model 3</a>
-                <a href='/'>Model X</a>
-                <a href='/'>Model Y</a>
+                {cars?.map((car, index) => (
+                    <a key={index} href='/'>{car}</a>
+                ))}
             </Menu>
             <RightMenu>
                 <a href='/'>Shop</a>
@@ -26,19 +30,18 @@ const Header = () => {
                 <ClosebtnWrapper>
                     <CustomClose onClick={()=>setBurgerStatus(false)}/>
                 </ClosebtnWrapper>
-                <li><a href="/">Model S</a></li>
-                <li><a href="/">Model 3</a></li>
-                <li><a href="/">Model X</a></li>
-                <li><a href="/">Model Y</a></li>
-                <li><a href="/">Existing inventory</a></li>
-                <li><a href="/">Used inventory</a></li>
-                <li><a href="/">Trade-in</a></li>
-                <li><a href="/">Cybertruck</a></li>
-                <li><a href="/">Roadster</a></li>
-                <li><a href="/">Charging</a></li>
-                <li><a href="/">Power</a></li>
-                <li><a href="/">Utilities</a></li>
-                <li><a href="/">Test Drive</a></li>
+                    {cars?.map((car, index) => (
+                      <li key={index}><a href="/">{car}</a></li>
+                    ))}
+                    <li><a href="/">Existing inventory</a></li>
+                    <li><a href="/">Used inventory</a></li>
+                    <li><a href="/">Trade-in</a></li>
+                    <li><a href="/">Cybertruck</a></li>
+                    <li><a href="/">Roadster</a></li>
+                    <li><a href="/">Charging</a></li>
+                    <li><a href="/">Power</a></li>
+                    <li><a href="/">Utilities</a></li>
+                    <li><a href="/">Test Drive</a></li>
             </BurgerNav>
         </Conatiner>
     );
