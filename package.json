@@ -1,5 +1,6 @@
 {
   "name": "tesla-clone",
+  "homepage": "https://salimidev.github.io/TESLA-CLONE",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -20,7 +21,6 @@
     "styled-components": "^5.3.5",
     "web-vitals": "^2.1.4"
   },
-  "homepage": "https://salimidev.github.io/TESLA-CLONE"
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
