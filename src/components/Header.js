@@ -3,6 +3,7 @@ import styled from 'styled-components';
 //Icons
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
+import logo from '../assets/logo.svg';
 //Redux
 import { useSelector } from 'react-redux';
 import { selectCars } from '../features/car/carSlice';
@@ -14,7 +15,7 @@ const Header = () => {
     return (
         <Conatiner>
             <a href='/'>
-                <img src='/images/logo.svg' alt='logo' />
+                <img src={logo} alt='logo' />
             </a>
             <Menu>
                 {cars?.map((car, index) => (
