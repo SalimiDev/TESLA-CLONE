@@ -4,7 +4,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Preview
 
-![project shot](https://github.com/SalimiDev/TESLA-CLONE/blob/main/public/images/preview.jpg)
+![project shot](https://github.com/SalimiDev/TESLA-CLONE/blob/main/preview/preview.jpg)
 
 ### Tech Stack
 
